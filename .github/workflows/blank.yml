@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Create a Zip File
-        run: zip -X -r deployment.zip *
+        run: zip -X -r deployment-${{github.sha}}.zip *
 
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
