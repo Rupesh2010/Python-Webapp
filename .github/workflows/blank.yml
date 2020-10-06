@@ -19,5 +19,5 @@ jobs:
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
         with:
-          name: my-artifacts-${GITHUB_RUN_NUMBER}
+          name: my-artifacts-${{github.sha}}
           path: deployment.zip 
